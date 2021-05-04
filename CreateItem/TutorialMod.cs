@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using VolcanoidsSDK;
+using TutorialMod.lib;
 
 namespace TutorialMod
 {
@@ -33,6 +34,7 @@ namespace TutorialMod
                     break;
                 case "Island":
                     Functions volcFunctions = new Functions(volcSDK);
+                    TutorialItems items = new TutorialItems().InitItems(volcFunctions);
                     break;
             }
         }
