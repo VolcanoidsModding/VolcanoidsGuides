@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VolcanoidsSDK;
 
-namespace TutorialMod.Guides.InitSDK
+namespace TutorialMod
 {
     class TutorialMod : GameMod
     {
