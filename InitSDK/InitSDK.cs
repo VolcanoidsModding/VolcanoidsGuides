@@ -13,6 +13,7 @@ namespace TutorialMod.Guides.InitSDK
     class InitSDK : GameMod
     {
         public SDK volcSDK;
+        //public Functions volcFunctions; If you want it globally uncomment this line.
         public override void Load()
         {
             var version = typeof(InitSDK).Assembly.GetName().Version;
@@ -30,9 +31,10 @@ namespace TutorialMod.Guides.InitSDK
             {
                 case "MainMenu":
                     GameObject.Find("EarlyAccess").gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "TutorialMod";
-                    Functions volcFunctions = new Functions(volcSDK);
                     break;
                 case "Island":
+                    Functions volcFunctions = new Functions(volcSDK); //If you want it globally comment out this line.
+                    //volcFunctions = new Functions(volcSDK); If you want it globally uncomment this line.
                     break;
             }
         }
