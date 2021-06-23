@@ -26,9 +26,5 @@ namespace TutorialMod.Guides.GettingStarted
                     break;
             }
         }
-
-        public override void Unload()
-        {
-        }
     }
 }
