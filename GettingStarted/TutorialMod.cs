@@ -8,9 +8,9 @@ namespace TutorialMod.Guides.GettingStarted
     {
         public override void Load()
         {
-            var version = typeof(TutorialMod).Assembly.GetName().Version;
+            var version   = GetType().Assembly.GetName().Version;
             var lastWrite = File.GetLastWriteTime(typeof(TutorialMod).Assembly.Location);
-            Debug.Log($"TutorialMod Loaded: {version}, Build Time: {lastWrite.ToShortTimeString()}");
+            Debug.Log($"{GetType()} Loaded: {version}, Build Time: {lastWrite.ToShortTimeString()}");
 
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
